@@ -1,12 +1,7 @@
 // @flow
 import type { SalesItem, CalculatedSalesData } from '../types/sales.js';
 
-// This function can be used for listing both input and output
-function listItem(count: number, isImported: boolean, label: string, value: number) {
-  const importedLabel = isImported ? 'imported ' : '';
-
-  return `${count} ${importedLabel}${label} at ${value.toFixed(2)}\n`;
-}
+const listItem = require('./helpers/list-item');
 
 module.exports = function printInformation(
   salesData: Array<SalesItem>,
