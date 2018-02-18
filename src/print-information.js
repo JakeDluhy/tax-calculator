@@ -37,4 +37,4 @@ module.exports = function printInformation(
          outputString +
          `Sales Taxes: ${totalSalesTax.toFixed(2)}\n` +
          `Total: ${total.toFixed(2)}`;
-}
+};

@@ -33,4 +33,4 @@ module.exports = function taxCalculator(salesData: Array<SalesItem>): Calculated
       total: dataObj.total + (itemValue + salesTax),
     };
   }, calculatedSalesData);
-}
+};
