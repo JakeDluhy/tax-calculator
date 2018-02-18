@@ -6,7 +6,8 @@
   "scripts": {
     "flow": "flow",
     "test": "flow-node test-cases.js",
-    "build": "flow-remove-types src/ -d lib/"
+    "build": "flow-remove-types src/ -d lib/",
+    "prepublish": "npm run build",
   },
   "repository": {
     "type": "git",
