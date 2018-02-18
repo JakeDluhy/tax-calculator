@@ -7,7 +7,7 @@ const IMPORT_RATE = 0.05;
 const TAX_ROUNDING_FACTOR = 0.05;
 
 function roundTaxes(tax: number): number {
-  return Math.round(tax / TAX_ROUNDING_FACTOR) * TAX_ROUNDING_FACTOR;
+  return Math.ceil(tax / TAX_ROUNDING_FACTOR) * TAX_ROUNDING_FACTOR;
 }
 
 module.exports = function taxCalculator(salesData: Array<SalesItem>): CalculatedSalesData {
