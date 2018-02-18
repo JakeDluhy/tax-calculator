@@ -7,11 +7,6 @@ module.exports = function printInformation(
   salesData: Array<SalesItem>,
   calculatedSalesData: CalculatedSalesData
 ): string {
-  // List out each sales input by count, label, and value. Include if the item is imported
-  const inputString = salesData.map((data: SalesItem) =>
-    listItem(data.count, data.isImported, data.label, data.value)
-  ).join('');
-
   const { taxes, total } = calculatedSalesData;
 
   // Now list out each item's value, including sales tax
@@ -25,10 +20,7 @@ module.exports = function printInformation(
   const totalSalesTax = taxes.reduce((sum: number, val: number) => sum + val, 0);
 
   // Not using multiline template because of maintaining indentation
-  return 'INPUT:\n' +
-         inputString +
-         '\n' +
-         'OUTPUT:\n' +
+  return 'OUTPUT:\n' +
          outputString +
          `Sales Taxes: ${totalSalesTax.toFixed(2)}\n` +
          `Total: ${total.toFixed(2)}`;

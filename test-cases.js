@@ -2,7 +2,8 @@
 import type { SalesItem, CalculatedSalesData } from './types/sales.js';
 
 const taxCalculator = require('./src/tax-calculator');
-const printInformation = require('./src/print-information');
+const printInput = require('./src/print-input');
+const printOutput = require('./src/print-output');
 
 const TEST_CASE_1: Array<SalesItem> = [
   {
@@ -83,7 +84,8 @@ TEST_CASES.forEach((data, idx) => {
 
   /* eslint-disable */
   console.log(`TEST CASE ${idx + 1}`);
-  console.log(printInformation(data, calculatedSalesData));
-  console.log('\n\n');
+  console.log(printInput(data));
+  console.log(printOutput(data, calculatedSalesData));
+  console.log('\n');
   /* eslint-enable */
 });
