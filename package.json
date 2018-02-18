@@ -7,7 +7,7 @@
     "flow": "flow",
     "lint": "eslint src/ test-cases.js",
     "test": "flow-node test-cases.js",
-    "build": "flow-remove-types src/ -d lib/",
+    "build": "rm -rf lib && flow-remove-types src/ -d lib/",
     "prepublish": "npm run build"
   },
   "repository": {
